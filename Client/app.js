@@ -3,14 +3,14 @@ $(document).ready(function() {
 
     $(function(){
 
-        $.get("https://localhost:44325/api/movie/", function(data){
-            console.log(data);
-    
+        $.get("https://localhost:44325/api/movie/", function(data){    
             data.map(function(el){
-                $("#tbody").append(`<td class="row-index text-center"> 
-                <p>${el.title}</p></td> <td class="row-index text-center"> 
-                <p>${el.director}</p></td><td class="row-index text-center"> 
-                <p>${el.genre}</p></td>`);
+                $("#tbody").append(`
+                <tr>
+                <td><p>${el.title}</p></td> 
+                <td><p>${el.director}</p></td>
+                <td><p>${el.genre}</p></td>
+                </tr>`);
             })
         })      
     });
