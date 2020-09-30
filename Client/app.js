@@ -2,7 +2,6 @@ $(document).ready(function() {
     // all custom jQuery will go here
 
     $(function(){
-
         $.get("https://localhost:44325/api/movie/", function(data){    
             data.map(function(el){
                 $("#tbody").append(`
