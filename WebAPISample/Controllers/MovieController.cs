@@ -41,7 +41,6 @@ namespace WebAPISample.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]Movie value)
         {
-            //Questions about MovieId, Title, Genre, Director. No external parameters No constructor.
             // Create movie in db logic
 
             Movie movie = new Movie();
