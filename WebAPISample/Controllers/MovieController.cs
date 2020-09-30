@@ -53,6 +53,7 @@ namespace WebAPISample.Controllers
         public IActionResult Put([FromBody] Movie movie)
         {
             // Update movie in db logic
+
             return Ok();
         }
 
@@ -61,6 +62,8 @@ namespace WebAPISample.Controllers
         public IActionResult Delete(int id)
         {
             // Delete movie from db logic
+            _context.Movies.Where(c => c.MovieId == id).Single();
+            _context.Remove(id);
             return Ok();
         }
     }
