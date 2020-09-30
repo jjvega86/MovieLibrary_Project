@@ -11,7 +11,7 @@ $(function(){
     })
 })
 
-(function($){
+$(function(){
     function processForm( e ){
         var dict = {
         	Title : this["title"].value,
