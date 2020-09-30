@@ -42,8 +42,8 @@ namespace WebAPISample.Controllers
         public IActionResult Post([FromBody]Movie value)
         {
             // Create movie in db logic
-            Movie movie = new Movie();
-            _context.Add(movie);
+            Movie movie = new Movie();//Questions about MovieId, Title, Genre, Director. No external parameters No constructor.
+            _context.Movies.Add(movie);//Or should it be value?
             _context.SaveChanges();
             return Ok();
         }
@@ -53,7 +53,8 @@ namespace WebAPISample.Controllers
         public IActionResult Put([FromBody] Movie movie)
         {
             // Update movie in db logic
-
+            _context.Movies.Update(movie);//Not sure about this one.
+            _context.SaveChanges();
             return Ok();
         }
 
