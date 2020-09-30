@@ -22,7 +22,7 @@ namespace WebAPISample.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var movies = _context.Movies.ToList();
+            List<Movie> movies = _context.Movies.ToList();
             return Ok(movies);
         }
 
@@ -41,14 +41,9 @@ namespace WebAPISample.Controllers
         {
             // Create movie in db logic
 
-            Movie movie = new Movie();
-            value.Title = movie.Title;
-            value.Director = movie.Director;
-            value.Genre = movie.Genre;
-
-            _context.Movies.Add(movie);
+            _context.Movies.Add(value);
             _context.SaveChanges();
-            return Ok();
+            return Ok(value);
         }
 
         // PUT api/movie
