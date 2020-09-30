@@ -23,13 +23,9 @@ namespace WebAPISample.Controllers
         public IActionResult Get()
         {
             // Retrieve all movies from db logic
-<<<<<<< HEAD
-            //return Ok(new string[] { "movie1 string", "movie2 string" });
-            return Ok(_context.Movies);
-=======
-            _context.Movies.ToList();                 
-            return Ok(new string[] { "movie1 string", "movie2 string" });
->>>>>>> 6b45dac5e6ced9a31f0b956a38f88ac39b0a9c99
+            var movies = _context.Movies.ToList();                 
+            return Ok(movies);
+
         }
 
         // GET api/movie/5
@@ -37,18 +33,23 @@ namespace WebAPISample.Controllers
         public IActionResult Get(int id)
         {
             // Retrieve movie by id from db logic
-            // return Ok(movie);
-            _context.Movies.Where(c => c.MovieId == id).Single();
-            return Ok();
+            var movie = _context.Movies.Where(c => c.MovieId == id).SingleOrDefault();
+            return Ok(movie);
         }
 
         // POST api/movie
         [HttpPost]
         public IActionResult Post([FromBody]Movie value)
         {
+            //Questions about MovieId, Title, Genre, Director. No external parameters No constructor.
             // Create movie in db logic
-            Movie movie = new Movie();//Questions about MovieId, Title, Genre, Director. No external parameters No constructor.
-            _context.Movies.Add(movie);//Or should it be value?
+
+            Movie movie = new Movie();
+            value.Title = movie.Title;
+            value.Director = movie.Director;
+            value.Genre = movie.Genre;
+
+            _context.Movies.Add(movie);
             _context.SaveChanges();
             return Ok();
         }
@@ -58,7 +59,12 @@ namespace WebAPISample.Controllers
         public IActionResult Put([FromBody] Movie movie)
         {
             // Update movie in db logic
-            _context.Movies.Update(movie);//Not sure about this one.
+            var movieToUpdate = _context.Movies.Where(c => c.MovieId == movie.MovieId).SingleOrDefault();
+            movieToUpdate.Title = movie.Title;
+            movieToUpdate.Director = movie.Director;
+            movieToUpdate.Genre = movie.Genre;
+
+            _context.Movies.Update(movieToUpdate);
             _context.SaveChanges();
             return Ok();
         }
@@ -68,8 +74,9 @@ namespace WebAPISample.Controllers
         public IActionResult Delete(int id)
         {
             // Delete movie from db logic
-            _context.Movies.Where(c => c.MovieId == id).Single();
+            _context.Movies.Where(c => c.MovieId == id).SingleOrDefault();
             _context.Remove(id);
+            _context.SaveChanges();
             return Ok();
         }
     }
