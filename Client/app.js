@@ -1,13 +1,15 @@
 $(function(){
 
     $.get("https://localhost:44325/api/movie/", function(data){
-        console.log(data);
+        //console.log(data);
 
         data.map(function(el){
-            $("#Movies").append(`<div> Movie Title: ${el.title} </div>
-            <div> Movie Director: ${el.director}</div>
-            <br>`);
-        })
+            $("#Movies").append(`<div> Title: ${el.title} 
+              Director: ${el.director}
+              Genre: ${el.genre}
+             </div>
+            <br>`);          
+        })   
     })
 })
 
