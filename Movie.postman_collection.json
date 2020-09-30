@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "8b2d112f-448e-4b88-a6c7-fa618f110d12",
+		"name": "Movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MovieController GET All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Testing the GET action for all movies in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "MovieController GET Specific movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/movie/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						"3"
+					]
+				},
+				"description": "Testing the GET action for a specific movie "
+			},
+			"response": []
+		},
+		{
+			"name": "MovieController POST Adding a movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Super Man\",\r\n    \"director\": \"Richard Donner\",\r\n    \"genre\": \"Action\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/movie",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie"
+					]
+				},
+				"description": "This is the post method to add a movie to the DB"
+			},
+			"response": []
+		},
+		{
+			"name": "MovieController PUT Updating a movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\": 7,\r\n    \"title\": \"Super Man\",\r\n    \"director\": \"Richard Donner\",\r\n    \"genre\": \"Action\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/movie",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie"
+					]
+				},
+				"description": "This will properly update a movie"
+			},
+			"response": []
+		},
+		{
+			"name": "MovieController DELETE Specific movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/movie/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						"7"
+					]
+				},
+				"description": "This will take a single movie and remove it from the database."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

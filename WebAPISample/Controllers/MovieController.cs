@@ -40,16 +40,10 @@ namespace WebAPISample.Controllers
         public IActionResult Post([FromBody]Movie value)
         {
             //Questions about MovieId, Title, Genre, Director. No external parameters No constructor.
-            // Create movie in db logic
 
-            Movie movie = new Movie();
-            value.Title = movie.Title;
-            value.Director = movie.Director;
-            value.Genre = movie.Genre;
-
-            _context.Movies.Add(movie);
+            _context.Movies.Add(value);
             _context.SaveChanges();
-            return Ok();
+            return Ok(value);
         }
 
         // PUT api/movie
@@ -57,14 +51,10 @@ namespace WebAPISample.Controllers
         public IActionResult Put([FromBody] Movie movie)
         {
             // Update movie in db logic
-            var movieToUpdate = _context.Movies.Where(c => c.MovieId == movie.MovieId).SingleOrDefault();
-            movieToUpdate.Title = movie.Title;
-            movieToUpdate.Director = movie.Director;
-            movieToUpdate.Genre = movie.Genre;
-
-            _context.Movies.Update(movieToUpdate);
+            
+            _context.Movies.Update(movie);
             _context.SaveChanges();
-            return Ok();
+            return Ok(movie);
         }
 
         // DELETE api/movie/5
@@ -72,8 +62,8 @@ namespace WebAPISample.Controllers
         public IActionResult Delete(int id)
         {
             // Delete movie from db logic
-            _context.Movies.Where(c => c.MovieId == id).SingleOrDefault();
-            _context.Remove(id);
+            var movieToRemove = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
+            _context.Remove(movieToRemove);
             _context.SaveChanges();
             return Ok();
         }
