@@ -4,9 +4,8 @@
     <title>Movie Library</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">   
 
 </head>
@@ -20,12 +19,18 @@
     </nav>
       <br>
     <div class="container">
-        <div class ="row">
+        <div class="row text-center top-buffer">
+            <div class="col-md-12">
+                <h1 class="text-primary">Welcome to MovieLovr!</h1>
+            </div>
+        </div>
+        <div class ="row text-center top-buffer bottom-buffer">
             <div class="col-md-12">
                 <div id="response">
                     <pre></pre>
                 </div>
-                <h3>Add A Movie!</h3>
+
+                <p>Add a movie to the library!</p>
                 <form id="my-form">
                     <input type="text" name="title" placeholder="Title" />
                     <input type="text" name="director" placeholder="Director" />
@@ -33,7 +38,9 @@
                     <button type="submit">Submit</button>
                 </form>
                 </div>
-            </div>      
+            </div>
+            <br>
+            <br>      
         <div class = "row">
             <table class="table">
                 <thead>
@@ -41,11 +48,12 @@
                     <th scope="col">Title</th>
                     <th scope="col">Director</th>
                     <th scope="col">Genre</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
-                <tbody id="tbody">
-                  
-                </tbody>
+                <tbody id="tbody"></tbody>
               </table>
         </div>
     </div>

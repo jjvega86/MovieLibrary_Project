@@ -1,17 +1,28 @@
 $(document).ready(function() {
+
     // all custom jQuery will go here
     $(function(){
         $.get("https://localhost:44325/api/movie/", function(data){    
+
             data.map(function(el){
+
+                
                 $("#tbody").append(`
                 <tr>
                 <td><p>${el.title}</p></td> 
                 <td><p>${el.director}</p></td>
                 <td><p>${el.genre}</p></td>
+                /* <td>ADD IMAGE BUTTON</td>
+                <td>EDIT IMAGE BUTTON</td>
+                <td>VIEW IMAGE BUTTON</td> */
+
                 </tr>`);
+
             })
         })      
     });
+
+  
     
     (function($){
         function processForm( e ){
@@ -39,6 +50,7 @@ $(document).ready(function() {
         }
     
         $('#my-form').submit( processForm );
+        
     })(jQuery);
     
          //I got this from W3schools.com
@@ -48,6 +60,7 @@ $(document).ready(function() {
               $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
          });
     })
+
 });
 /* 
     $("#search_button").click(function(){
@@ -81,6 +94,8 @@ $(document).ready(function() {
         })
  */
        
+
+
 
 
 
