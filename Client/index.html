@@ -4,12 +4,16 @@
     <title>Movie Library</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">   
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-brand text-light" href="#">MovieLovr</a>
+            <input id="myInput" type="text" placeholder="Search..">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,17 +21,19 @@
       <br>
     <div class="container">
         <div class ="row">
-            <div id="response">
-                <pre></pre>
-            </div>
-        
-            <form id="my-form">
-                <input type="text" name="title" placeholder="Title" />
-                <input type="text" name="director" placeholder="Director" />
-                <input type="text" name="genre" placeholder="Genre" />
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+            <div class="col-md-12">
+                <div id="response">
+                    <pre></pre>
+                </div>
+                <h3>Add A Movie!</h3>
+                <form id="my-form">
+                    <input type="text" name="title" placeholder="Title" />
+                    <input type="text" name="director" placeholder="Director" />
+                    <input type="text" name="genre" placeholder="Genre" />
+                    <button type="submit">Submit</button>
+                </form>
+                </div>
+            </div>      
         <div class = "row">
             <table class="table">
                 <thead>

@@ -40,5 +40,48 @@ $(document).ready(function() {
     
         $('#my-form').submit( processForm );
     })(jQuery);
+    
+         //I got this from W3schools.com
+         $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tbody tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+         });
+    })
 });
+/* 
+    $("#search_button").click(function(){
+        var movies = data.filter(function(movies){
+            return true;
+        }); 
+        
+        var searchBy = $("#searchBy").val();
+        var searchName = $("#search_text").val();
+        var setData = $("#my_form");
+        setData.html("");
+
+        let foundMovies = movies.filter(function(movie){
+            if(movie[searchBy]){
+                return true;
+            }
+        })
+        var id = 1;
+        $.ajax({
+            url: 'https://localhost:44325/api/movie/' + id,
+            dataType: 'json',
+            type: 'get',
+           
+           
+            success: function( data, textStatus, jQxhr ){
+                $('#response pre').html( data );
+            },
+            error: function( jqXhr, textStatus, errorThrown ){
+                console.log( errorThrown );
+            }
+        })
+ */
+       
+
+
+
 
