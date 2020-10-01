@@ -1,7 +1,27 @@
-body{
-background-color: grey;
-}
+
 #movies{
     background-color: white;
 }
-/*font-family: 'Spectral', serif; This is the font-family from Google.
+
+body{
+    font-family: 'Spectral', serif;
+}
+
+/* tr:nth-child(even) {
+background-color: #02b875;
+color: white;
+} */
+
+tr:hover {
+    background-color: gray;
+    color: white;
+}
+
+.top-buffer { 
+    margin-top:20px; 
+}
+
+.bottom-buffer {
+    margin-bottom: 20px;
+}
+
