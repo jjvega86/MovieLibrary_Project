@@ -8,6 +8,10 @@ $(document).ready(function() {
                 <td><p>${el.title}</p></td> 
                 <td><p>${el.director}</p></td>
                 <td><p>${el.genre}</p></td>
+                /* <td>ADD IMAGE BUTTON</td>
+                <td>EDIT IMAGE BUTTON</td>
+                <td>VIEW IMAGE BUTTON</td> */
+
                 </tr>`);
             })
         })      
