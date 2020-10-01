@@ -7,10 +7,26 @@ body{
     font-family: 'Spectral', serif;
 }
 
+#tbody {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    ;
+}
+
 /* tr:nth-child(even) {
 background-color: #02b875;
 color: white;
 } */
+
+.welcome {
+    font-size: 6.5em;
+}
+
+.subtitle {
+    font-size: 2em;
+    color: #008cba;
+}
 
 tr:hover {
     background-color: gray;
@@ -19,6 +35,14 @@ tr:hover {
 
 .top-buffer { 
     margin-top:20px; 
+}
+
+.background {
+    background-image: url("http://ericmhill.net/images/hollywood3.jpg");
+    background-position: center;
+    opacity: .8;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bottom-buffer {
