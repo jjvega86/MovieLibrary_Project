@@ -37,13 +37,13 @@ tr:hover {
     margin-top:20px; 
 }
 
-.background {
+/*.background {
     background-image: url("http://ericmhill.net/images/hollywood3.jpg");
     background-position: center;
     opacity: .8;
     background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size: 
+}*/
 
 .bottom-buffer {
     margin-bottom: 20px;

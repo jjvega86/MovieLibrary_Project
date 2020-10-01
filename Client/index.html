@@ -4,20 +4,26 @@
     <title>Movie Library</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">   
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand text-light" href="#">MovieLovr</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-
-    <br>
-
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">MovieLovr</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="form-inline my-2 my-lg-0 navbar-right">
+                    <input class="form-control mr-sm-2" id="myInput" type="text" placeholder="Search">
+                </form>
+            </div>
+        </nav>
+    
+      <br>
     <div class="container">
         <div class="background">
         <div class="row text-center top-buffer">
@@ -30,7 +36,8 @@
                 <div id="response">
                     <pre></pre>
                 </div>
-                <p class="subtitle">Add a movie to the library!</p>
+
+                <p class="subtitle">Add a Movie to the Library!</p>
                 <form id="my-form">
                     <input type="text" name="title" placeholder="Title" />
                     <input type="text" name="director" placeholder="Director" />
@@ -55,8 +62,6 @@
                 </thead>
                 <tbody id="tbody"></tbody>
               </table>
-        </div>
-
         </div>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
