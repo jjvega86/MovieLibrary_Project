@@ -39,8 +39,6 @@ namespace WebAPISample.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]Movie value)
         {
-
-
             _context.Movies.Add(value);
             _context.SaveChanges();
             return Ok(value);
