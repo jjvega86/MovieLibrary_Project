@@ -15,6 +15,10 @@ namespace WebAPISample.Data
         {
             base.OnModelCreating(modelBuilder);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b76824842ef001f78a3814c09b1551ba9a663711
             //modelBuilder.Entity<Movie>()
             // .HasData(
             //    new Movie { MovieId = 1, Title = "The Departed", Genre = "Drama", Director = "Martin Scorsese" },
