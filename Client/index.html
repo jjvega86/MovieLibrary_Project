@@ -19,12 +19,17 @@
     <br>
 
     <div class="container">
-        <div class ="row">
+        <div class="row text-center top-buffer">
+            <div class="col-md-12">
+                <h1 class="text-primary">Welcome to MovieLovr!</h1>
+            </div>
+        </div>
+        <div class ="row text-center top-buffer bottom-buffer">
             <div class="col-md-12">
                 <div id="response">
                     <pre></pre>
                 </div>
-            
+                <p>Add a movie to the library!</p>
                 <form id="my-form">
                     <input type="text" name="title" placeholder="Title" />
                     <input type="text" name="director" placeholder="Director" />
@@ -32,7 +37,9 @@
                     <button type="submit">Submit</button>
                 </form>
                 </div>
-            </div>      
+            </div>
+            <br>
+            <br>      
         <div class = "row">
             <table class="table">
                 <thead>
@@ -40,11 +47,12 @@
                     <th scope="col">Title</th>
                     <th scope="col">Director</th>
                     <th scope="col">Genre</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
-                <tbody id="tbody">
-                  
-                </tbody>
+                <tbody id="tbody"></tbody>
               </table>
         </div>
 
